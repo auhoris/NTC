@@ -44,7 +44,6 @@ const std::vector<std::string>    parse(std::string file1, std::string file2) {
                 result.push_back(st1[i]);
         }
     }
-    std::sort(result.begin(), result.end());
     return result;
 }
 
