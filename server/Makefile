@@ -1,10 +1,7 @@
 server = server
-client = client
-
 serv_src = server.cpp
-cli_src = client.cpp
 
-all: $(server) $(client)
+all: $(server)
 
 cc = clang++
 ccflags = -I /usr/local/include -L /usr/local/lib -lzmq
@@ -15,10 +12,7 @@ warnf = -Wall -Wextra -Werror
 $(server): $(serv_src) zhelpers.hpp
 	$(cc) $(ccflags) $< -o $@
 
-$(client): $(cli_src) zhelpers.hpp
-	$(cc) $(ccflags) $< -o $@
-
 clean:
-	rm -f $(server) $(client)
+	rm -f $(server)
 
 re: clean all

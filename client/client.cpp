@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <fstream>
 #include <string>
 #include <set>
 #include <iostream>
@@ -26,8 +27,14 @@ int main()
         if (tmp - data.size() == 0)
             break;
     }
+    std::ofstream   data_file("students_result.txt");
     for (auto it : data) {
-        std::cout << it << std::endl;
+        data_file << it << std::endl;
     }
+    // int i = 0;
+    // while (i < 5) {
+    //     sleep(3);
+    //     i++;
+    // }
     return 0;
 }
