@@ -13,7 +13,7 @@ int main()
 
     // Subscribe to everything
     zmq::socket_t subscriber(context, ZMQ_SUB);
-    subscriber.connect("tcp://localhost:5556");
+    subscriber.connect("tcp://127.0.0.1:5556");
     subscriber.setsockopt (ZMQ_SUBSCRIBE, "", 0);
 
     std::stringstream ss;
