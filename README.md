@@ -8,3 +8,7 @@
 - cd client
 - docker build -t ntc_client .
 - ./run.sh
+
+Задание №3
+Написать SQL скрипт для объединения уникальных записей из двух таблиц
+location: sql/script.sql
